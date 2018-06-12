@@ -1,0 +1,26 @@
+{
+  "name": "com.chinamobile.sig.csignals",
+  "version": "1.3.1",
+  "description": "this is a plugin about let gsm td data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+   "cordova": {
+    "id": "com.chinamobile.sig.csignals",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liangzhongtai/csignals.git"
+  },
+  "keywords": [
+    "cordova",
+    "signals"
+  ]
+}

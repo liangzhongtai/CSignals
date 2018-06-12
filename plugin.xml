@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.chinamobile.sig.csignals" version="1.3.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>csignals</name>
+    <js-module name="csignals" src="www/csignals.js">
+        <clobbers target="cordova.plugins.csignals" />
+    </js-module>
+
+	<platform name="android">
+        <!-- 定位插件 -->
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CSignals">
+                <param name="android-package" value="com.chinamobile.sig.CSignals"/>
+            </feature>
+        </config-file>
+		<!-- 权限 -->
+        <config-file target="AndroidManifest.xml" parent="/*">
+			<uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />
+			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+			<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+		</config-file>
+        <!-- 项目文件 -->
+         <source-file src="src/android/CSignals.java"  target-dir="src/com/chinamobile/sig" />
+         <source-file src="src/android/CSignalsUtil.java"  target-dir="src/com/chinamobile/sig" />
+    </platform>
+    
+    <platform name="ios">
+        <!-- 定位插件 -->
+        <config-file target="config.xml" parent="/*">
+            <feature name="CSignals">
+                <param name="ios-package" value="CSignals" />
+            </feature>
+        </config-file>
+        <!--  项目文件 -->
+       
+        
+    </platform>
+
+</plugin>
